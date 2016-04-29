@@ -204,9 +204,6 @@
 <Plug>(neosnippet_expand_or_jump)	neosnippet.txt	/*<Plug>(neosnippet_expand_or_jump)*
 <Plug>(neosnippet_jump)	neosnippet.txt	/*<Plug>(neosnippet_jump)*
 <Plug>(neosnippet_jump_or_expand)	neosnippet.txt	/*<Plug>(neosnippet_jump_or_expand)*
-<Plug>(openbrowser-open)	openbrowser.txt	/*<Plug>(openbrowser-open)*
-<Plug>(openbrowser-search)	openbrowser.txt	/*<Plug>(openbrowser-search)*
-<Plug>(openbrowser-smart-search)	openbrowser.txt	/*<Plug>(openbrowser-smart-search)*
 <Plug>(unite_all_exit)	unite.txt	/*<Plug>(unite_all_exit)*
 <Plug>(unite_append_end)	unite.txt	/*<Plug>(unite_append_end)*
 <Plug>(unite_append_enter)	unite.txt	/*<Plug>(unite_append_enter)*
@@ -994,7 +991,6 @@ openbrowser-changelog	openbrowser.txt	/*openbrowser-changelog*
 openbrowser-commands	openbrowser.txt	/*openbrowser-commands*
 openbrowser-contents	openbrowser.txt	/*openbrowser-contents*
 openbrowser-faq	openbrowser.txt	/*openbrowser-faq*
-openbrowser-filepath-detection	openbrowser.txt	/*openbrowser-filepath-detection*
 openbrowser-functions	openbrowser.txt	/*openbrowser-functions*
 openbrowser-github	openbrowser-github.txt	/*openbrowser-github*
 openbrowser-github-changelog	openbrowser-github.txt	/*openbrowser-github-changelog*
@@ -1017,7 +1013,6 @@ openbrowser-menu-smart-search	openbrowser.txt	/*openbrowser-menu-smart-search*
 openbrowser-menus	openbrowser.txt	/*openbrowser-menus*
 openbrowser-option-syntax	openbrowser.txt	/*openbrowser-option-syntax*
 openbrowser-thanks	openbrowser.txt	/*openbrowser-thanks*
-openbrowser-url-detection	openbrowser.txt	/*openbrowser-url-detection*
 openbrowser-variables	openbrowser.txt	/*openbrowser-variables*
 openbrowser.txt	openbrowser.txt	/*openbrowser.txt*
 rF	clojure.txt	/*rF*

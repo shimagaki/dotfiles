@@ -46,7 +46,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Townk/vim-autoclose' "complement of bracket 
 NeoBundle 'cohama/agit.vim'
-NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'open-browser.vim'
 NeoBundle 'tyru/open-browser-github.vim'
 NeoBundleCheck
 call neobundle#end()
@@ -67,9 +67,15 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit startinest
 runtime ftplugin/man.vim "enable to look man in vim with colorsd
 nnoremap gc :<C-u>!git<Space>  
-nnoremap go :<C-u>OpenGithubFile<CR>
-xnoremap go :OpenGithubFile<CR>
+"nnoremap go :<C-u>OpenGithubFile<CR>
+"xnoremap go :OpenGithubFile<CR>
+nnoremap <Leader>go :<C-u>OpenGithubFile<CR>
+vnoremap <Leader>go :OpenGithubFile<CR>
 
+"open-browser.vim
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 set backspace=2
 colorscheme jellybeans
