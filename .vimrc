@@ -20,7 +20,6 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
 	   filetype plugin indent on
 filetype plugin indent on
 
-
 if has('mac')
 "let g:vimproc_dll_path = $VIMRUNTIME. '/autoload/proc.so'
 let g:vimproc_dll_path = $VIMRUNTIME. '/autoload/vimproc_mac.so'

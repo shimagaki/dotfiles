@@ -6,9 +6,11 @@ molokai
 neobundle.vim
 neocomplcache
 neosnippet
+neosnippet-snippets
 nerdtree
 open-browser-github.vim
 open-browser.vim
+previm
 syntastic
 unite-colorscheme
 unite.vim
@@ -17,6 +19,7 @@ vim-colors-solarized
 vim-colors-wombat
 vim-fugitive
 vim-hybrid
+vim-markdown
 vim-slime
 vimproc
 vimshell
