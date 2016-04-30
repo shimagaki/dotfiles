@@ -19,6 +19,15 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 	   filetype plugin indent on
 filetype plugin indent on
+
+
+if has('mac')
+"let g:vimproc_dll_path = $VIMRUNTIME. '/autoload/proc.so'
+let g:vimproc_dll_path = $VIMRUNTIME. '/autoload/vimproc_mac.so'
+endif
+
+
+
 " Automaticaly close bracket -> these were commented out, there is plugin vim-autoclose
 "imap { {}<LEFT>
 "imap [ []<LEFT>
@@ -31,6 +40,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
@@ -48,6 +58,19 @@ NeoBundle 'Townk/vim-autoclose' "complement of bracket
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'open-browser.vim'
 NeoBundle 'tyru/open-browser-github.vim'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+  \ }
+NeoBundle 'rcmdnk/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a  google\ chrome'
 NeoBundleCheck
 call neobundle#end()
 "after here cannot use neobundle command
@@ -69,9 +92,8 @@ runtime ftplugin/man.vim "enable to look man in vim with colorsd
 nnoremap gc :<C-u>!git<Space>  
 "nnoremap go :<C-u>OpenGithubFile<CR>
 "xnoremap go :OpenGithubFile<CR>
-nnoremap <Leader>go :<C-u>OpenGithubFile<CR>
-vnoremap <Leader>go :OpenGithubFile<CR>
-
+map <silent>,go :OpenGithubFile<CR>
+map '<,'>,go '<,'>OpenGithubFile<CR>
 "open-browser.vim
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
