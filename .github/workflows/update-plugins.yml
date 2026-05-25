@@ -1,0 +1,43 @@
+name: Update plugin list
+
+on:
+  push:
+    branches: [master]
+    paths: [.vimrc]
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate plugin list
+        run: |
+          {
+            echo "# Vim Plugins"
+            echo ""
+            echo "Auto-generated from \`.vimrc\`."
+            echo ""
+            grep "^NeoBundle '" .vimrc | sed "s/NeoBundle '//;s/'.*$//" | while read -r plugin; do
+              if echo "$plugin" | grep -q "/"; then
+                echo "- [$plugin](https://github.com/$plugin)"
+              else
+                echo "- $plugin"
+              fi
+            done
+          } > plugins.md
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet plugins.md; then
+            git add plugins.md
+            git commit -m "Update plugin list
+
+Co-authored-by: shimagaki <kai0shimagaki@gmail.com>"
+            git push
+          fi
