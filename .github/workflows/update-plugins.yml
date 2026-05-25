@@ -19,7 +19,7 @@ jobs:
           {
             echo "# Vim Plugins"
             echo ""
-            echo "Auto-generated from \`.vimrc\`."
+            echo "Auto-generated from \`.vimrc\`. Last updated: $(date -u '+%Y-%m-%d %H:%M UTC')"
             echo ""
             grep "^NeoBundle '" .vimrc | sed "s/NeoBundle '//;s/'.*$//" | while read -r plugin; do
               if echo "$plugin" | grep -q "/"; then
