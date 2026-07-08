@@ -101,5 +101,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a google\ chrome'
+let g:vim_markdown_folding_disabled = 1
 
 colorscheme jellybeans
