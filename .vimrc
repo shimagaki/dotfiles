@@ -107,3 +107,6 @@ colorscheme jellybeans
 
 " Unset hi for .tex file"
 autocmd FileType tex hi Error NONE
+
+" Set autoread after editting"
+set autoread
