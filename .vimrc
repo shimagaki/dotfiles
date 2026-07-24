@@ -104,3 +104,6 @@ let g:previm_open_cmd = 'open -a google\ chrome'
 let g:vim_markdown_folding_disabled = 1
 
 colorscheme jellybeans
+
+" Unset hi for .tex file"
+autocmd FileType tex hi Error NONE
