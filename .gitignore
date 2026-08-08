@@ -1,0 +1,9 @@
+# Vim swap / undo / backup files
+*.swp
+*.swo
+*.swn
+*~
+.netrwhist
+
+# macOS
+.DS_Store
